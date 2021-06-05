@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class DeterminantCalculatorDouble {
 
     //Exceptions
-    public static boolean isNotInt(String string) {
+    public static boolean isNotDouble(String string) {
         if (string == null) {
             return true;
         } try {
@@ -23,7 +23,7 @@ public class DeterminantCalculatorDouble {
         String[] rowOne = userInput.nextLine().split(" ");
         double[] rowOneDouble = new double[rowOne.length];
         for (int i = 0; i < rowOne.length; i++) {
-            if (isNotInt(rowOne[i])) {
+            if (isNotDouble(rowOne[i])) {
                 return null;
             }
             rowOneDouble[i] = Double.parseDouble(rowOne[i]);
@@ -34,17 +34,17 @@ public class DeterminantCalculatorDouble {
         int i = 1;
         while (i < rowOne.length) {
             String[] rowMore = userInput.nextLine().split(" ");
-            double[] rowMoreInt = new double[rowMore.length];
+            double[] rowMoreDouble = new double[rowMore.length];
             for (int j = 0; j < rowMore.length; j++) {
-                if (isNotInt(rowMore[j])) {
+                if (isNotDouble(rowMore[j])) {
                     return null;
                 } else {
-                    rowMoreInt[j] = Integer.parseInt(rowMore[j]);
-                    if (rowMoreInt.length != rowOneDouble.length) {
+                    rowMoreDouble[j] = Double.parseDouble(rowMore[j]);
+                    if (rowMoreDouble.length != rowOneDouble.length) {
                         System.out.println("Error: Rows must be the same size");
                         return null;
                     }
-                    matrixBig[i] = rowMoreInt;
+                    matrixBig[i] = rowMoreDouble;
                 }
             }
             i++;
