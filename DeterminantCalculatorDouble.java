@@ -80,13 +80,13 @@ public class DeterminantCalculatorDouble {
             }
             matrixSmaller.add(tempArray);
         }
-        double[][] matrixSmallerInt = new double[matrix.length - 1][matrix.length - 1];
+        double[][] matrixSmallerDouble = new double[matrix.length - 1][matrix.length - 1];
         for (int i = 0; i < matrixSmaller.size(); i++) {
             for (int j = 0; j < matrixSmaller.size(); j++) {
-                matrixSmallerInt[i][j] = matrixSmaller.get(i).get(j);
+                matrixSmallerDouble[i][j] = matrixSmaller.get(i).get(j);
             }
         }
-        return matrixSmallerInt;
+        return matrixSmallerDouble;
     }
 
     //Determinant method
